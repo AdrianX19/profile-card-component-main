@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-greyish-blue: hsl(227, 10%, 46%);
+    --dark-grey: hsl(0, 0%, 59%);
+}
+
+body {
+    height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    color: var(--dark-desaturated-blue);
+    background: var(--dark-cyan);
+    background-image: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: left -245px top -515px, right -190px bottom -630px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 375px;
+    width: 350px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    background-image: url('../images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px 10px rgba(0, 0, 0, .10), 0 80px 60px -20px rgba(0, 0, 0, .1);
+}
+
+.card__personal-details {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.card__avatar {
+    margin: 82px 0 20px 0;
+    border-radius: 50%;
+    outline: 5px solid white;
+}
+
+.card__name {
+    font-weight: 700;
+}
+
+.card__name span {
+    margin-left: 10px;
+    font-weight: normal;
+    color: var(--dark-greyish-blue);
+}
+
+.card__city {
+    margin: 8px 0 15px 0;
+    font-size: 14px;
+    color: var(--dark-greyish-blue);
+}
+
+.card__stats {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 25px;
+}
+
+.card__stat {
+    flex-basis: 34%;
+}
+
+.card__figure {
+    margin-bottom: 3px;
+    font-weight: 700;
+}
+
+.card__heading {
+    font-size: 11px;
+    color: var(--dark-grey);
+    letter-spacing: 1px;
+}
+
+@media (max-width: 376px) {
+    body {
+        background-position: left -750px top -550px, right -700px bottom -550px;
+    }
+
+    .card {
+        width: 90%;
+        min-width: 270px;
+    }
+}
